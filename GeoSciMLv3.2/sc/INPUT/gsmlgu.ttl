@@ -145,8 +145,24 @@ gsmlgu:unitThickness  a  owl:ObjectProperty ;
 gsmlgu:GeologicUnit  a   owl:Class ;
         rdfs:subClassOf  gsml:GeologicFeature ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  gsmlgu:BeddingDescription ;
+                           owl:onProperty     gsmlgu:bedding
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  gsmlpp:PhysicalDescription ;
+                           owl:onProperty     gsmlgu:physicalProperty
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
                            owl:onProperty     gsmlgu:exposureColor
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  gsmlem:AlterationDescription ;
+                           owl:onProperty     gsmlgu:alterationCharacter
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  gsmlgu:GeologicUnitPart ;
+                           owl:onProperty     gsmlgu:part
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
@@ -161,12 +177,12 @@ gsmlgu:GeologicUnit  a   owl:Class ;
                            owl:onProperty     gsmlgu:bodyMorphology
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  gsmlgu:GeologicUnitPart ;
-                           owl:onProperty     gsmlgu:part
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  gsmlem:MetamorphicDescription ;
                            owl:onProperty     gsmlgu:metamorphicCharacter
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlgu:rank
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  gsmlgu:CompositionPart ;
@@ -177,28 +193,12 @@ gsmlgu:GeologicUnit  a   owl:Class ;
                            owl:onProperty     gsmlgu:geochemistry
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  swe:QuantityRange ;
-                           owl:onProperty     gsmlgu:unitThickness
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  gsmlgu:BeddingDescription ;
-                           owl:onProperty     gsmlgu:bedding
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlgu:rank
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  gsmlem:AlterationDescription ;
-                           owl:onProperty     gsmlgu:alterationCharacter
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  gsmlpp:PhysicalDescription ;
-                           owl:onProperty     gsmlgu:physicalProperty
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
                            owl:onProperty     gsmlgu:outcropCharacter
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  swe:QuantityRange ;
+                           owl:onProperty     gsmlgu:unitThickness
                          ] ;
         skos:definition  "Operationally, the GeologicUnit element is a container used to associate geologic properties with some mapped occurrence (through GeologicFeature.occurrence -> MappedFeature link), or with a geologic unit ControlledConcept in a vocabulary (through the GeologicUnit.classifier ->ControlledConcept link).\r\n\r\nConceptually, may represent a body of material in the Earth whose complete and precise extent is inferred to exist (NADM GeologicUnit, Stratigraphic unit in sense of NACSN or International Stratigraphic Code), or a classifier used to characterize parts of the Earth (e.g. lithologic map unit like 'granitic rock' or 'alluvial deposit', surficial units like 'till' or 'old alluvium').\r\n\r\nSpatial properties are only available through association with a MappedFeature. Includes both formal units (i.e. formally adopted and named in the official lexicon) and informal units (i.e. named but not promoted to the lexicon) and unnamed units (i.e. recognisable and described and delineable in the field but not otherwise formalised)."@en .
 

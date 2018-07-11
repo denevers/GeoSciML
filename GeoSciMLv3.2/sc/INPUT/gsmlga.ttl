@@ -42,6 +42,14 @@ gsmlga:GeologicEvent  a  owl:Class ;
                            owl:onProperty     gsmlga:olderNamedAge
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  gsmlga:NumericAgeRange ;
+                           owl:onProperty     gsmlga:numericAgeDate
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlga:eventProcess
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
                            owl:onProperty     gsmlga:eventEnvironment
                          ] ;
@@ -54,16 +62,8 @@ gsmlga:GeologicEvent  a  owl:Class ;
                            owl:onProperty     gsmlga:metadata
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  gsmlga:NumericAgeRange ;
-                           owl:onProperty     gsmlga:numericAgeDate
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  gsmlgt:StratigraphicPoint ;
                            owl:onProperty     gsmlga:prototype
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlga:eventProcess
                          ] ;
         skos:definition  "An identifiable event during which one or more geological processes act to modify geological entities. A GeologicEvent must have a specified GeologicAge and may have specified environments and processes. An example might be a cratonic uplift event during which erosion, sedimentation, and volcanism all take place.\r\n\r\nGeological history is an ordered aggregation of Geological Event objects, each of which may have an associated Geological Age, Geological Environment, and one or more Geological Process objects. Genesis typically pertains to some geological phenomenon (Geological Structure, Earth Material, Geological Unit, Fossil, etc.)\r\n\r\nIn GeoSciML 2.0 this ordering cannot be specified.\r\n\r\nA GeologicEvent must have a specified eventAge (numericAgeDate, olderNamedAge, or youngerNamedAge), at least one eventProcess, and may have specified eventEnvironments.  An example might be a cratonic uplift event during which erosion, sedimentation, and volcanism all take place. Traditionally, geologists have described the age of a feature without explicitly specifying the event or processes the age related to. The GeologicEvent package allows for explicitly linking the three, without mandating it.\r\n\r\nThe eventAge attribute is the age of a particular geological event or feature expressed in terms of years before present (absolute age), referred to the geological time scale, or by comparison with other geological events or features (relative age). An eventAge can represent an instant in time, an interval of time, or any combination of multiple instants or intervals. Specifications of age in years before present are based on determination of time durations based on interpretation of isotopic analyses of EarthMaterial (some other methods are used for geologically young materials). Ages referred to geological time scales are essentially based on correlation of a geological unit with a standard chronostratigraphic unit that serves as a reference. Relative ages are based on relationships between geological units such as superposition, intruded by, cross-cuts, or \"contains inclusions of\"."@en .
 

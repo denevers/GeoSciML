@@ -27,6 +27,9 @@ gsmlc:mappedItem  a      owl:ObjectProperty ;
         rdfs:range       gsml:MappedFeature ;
         skos:definition  "The mappedItem attribute is a placeholder for the MappedFeature class that is included as a member of a GSML Collection."@en .
 
+gsmlc:collectionType  a  owl:ObjectProperty ;
+        rdfs:range  skos:Concept .
+
 gsmlc:samplingFeatureItem
         a                owl:ObjectProperty ;
         rdfs:range       sf:SF_SamplingFeature ;
@@ -241,6 +244,10 @@ gsmlc:GSML  a            owl:Class ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  gsmlc:GSMLitem ;
                            owl:onProperty     gsmlc:member
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlc:collectionType
                          ] ;
         skos:definition  "A collection container for items to be bundled in WFS response documents and other applications. FeatureType stereotype allows this to be a FeatureMember in a WFS_FeatureCollection.\r\n\r\nAn attribute \"collectionType\" is added in version 3.2"@en .
 

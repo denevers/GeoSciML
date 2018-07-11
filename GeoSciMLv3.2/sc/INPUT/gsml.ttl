@@ -5,7 +5,6 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix gsmlv: <http://geosciml.org/ont/gsmlv#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix gsml:  <http://geosciml.org/ont/gsml#> .
 
@@ -24,7 +23,7 @@ gsml:GeologicFeature  a        owl:Class ;
                                  owl:onProperty     gsml:GeologicFeature.metadata
                                ] ;
         rdfs:subClassOf        [ a                  owl:Restriction ;
-                                 owl:allValuesFrom  gsmlv:ControlledConcept ;
+                                 owl:allValuesFrom  skos:Concept ;
                                  owl:onProperty     gsml:classifier
                                ] ;
         rdfs:subClassOf        [ a                  owl:Restriction ;
@@ -52,7 +51,7 @@ gsml:GeologicFeature.metadata
         rdfs:range   skos:Concept .
 
 gsml:classifier  a       owl:ObjectProperty ;
-        rdfs:range       gsmlv:ControlledConcept ;
+        rdfs:range       skos:Concept ;
         skos:definition  "A standard description or definition of the feature type (eg; the definition of a particular Geologic Unit in a stratigraphic lexicon)"@en .
 
 gsml:targetRole  a       owl:ObjectProperty ;
@@ -97,7 +96,7 @@ gsml:relatedFeature  a   owl:ObjectProperty ;
 
 <http://geosciml.org/ont/gsml>
         a                owl:Ontology ;
-        owl:imports      <http://www.opengis.net/ont/geosparql> , <http://geosciml.org/ont/gsmlv> , <http://schemas.geosciml.org/rdf/types.ttl> ;
+        owl:imports      <http://www.opengis.net/ont/geosparql> , <http://schemas.geosciml.org/rdf/types.ttl> ;
         owl:versionIRI   "http://geosciml.org/ont/gsml/3.2.0" ;
         owl:versionInfo  "3.2.0" ;
         skos:definition  "The GeoSciML-Core schema specifies a set of feature-types describing core geoscience information, including geologic units, structures, earth materials, relations between geologic features, and spatial geometries that represent geologic features on maps."@en .

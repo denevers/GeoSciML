@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result" xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result" config="sc/gsml3.xml" end="Wed Jun 20 18:33:19 EDT 2018" resultCode="0" start="Wed Jun 20 18:28:43 EDT 2018" version="2.5.0">
+<?xml version="1.0" encoding="UTF-8"?><ShapeChangeResult xmlns="http://www.interactive-instruments.de/ShapeChange/Result" xmlns:r="http://www.interactive-instruments.de/ShapeChange/Result" config="sc/gsml3wk.xml" end="Tue Jul 10 18:46:33 EDT 2018" resultCode="0" start="Tue Jul 10 18:41:49 EDT 2018" version="2.5.0">
   <Messages>
     <Info message="---------- Semantic validation of ShapeChange configuration: START ----------"/>
     <Info message="---------- Semantic validation of ShapeChange configuration: COMPLETE ----------"/>
-    <Info message="Connecting to C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_unversioned.EAP"/>
-    <Info message="Connected to C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_unversioned.EAP"/>
-    <Info message="Starting reading C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_unversioned.EAP"/>
+    <Info message="Connecting to C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_work.EAP"/>
+    <Info message="Connected to C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_work.EAP"/>
+    <Info message="Starting reading C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_work.EAP"/>
     <Warning message="Stereotype &lt;&lt;XSDattribute&gt;&gt; not supported for UML model elements of type 'AssociationEnd'.">
       <Detail message="Context: Property 'Model::Domain Model::HollowWorld::ISO TC211::ISO 19153 GeoDRM RM::ISO 19153:2013 GeoDRM RM::Data Model::Rel-r::licensePart::licensePartId'"/>
     </Warning>
@@ -72,16 +72,13 @@
       <Detail message="Context: class InfoImpl. Element: de.interactive_instruments.ShapeChange.Model.EA.PackageInfoEA@126f7b2. Name: InterleavedCoverages"/>
     </Warning>
     <Warning message="Application schema 'xlinks' with ID '556' is not associated with an XML Schema document. A default name is used: 'xlinks.xsd'."/>
-    <Info message="Finished reading C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_unversioned.EAP"/>
+    <Info message="Finished reading C:\etc\gsmlogc\GeoSciML\GeoSciMLv3.2\GeoSciMLv3.2_work.EAP"/>
     <Warning message="A single value was requested for tag 'targetNamespace', but in addition to returned value 'FIXME', an additional value 'http://www.opengis.net/geomExt/0.0' exists and is ignored.">
       <Detail message="Context: class InfoImpl. Element: de.interactive_instruments.ShapeChange.Model.EA.PackageInfoEA@720b71. Name: GeometryExtensions"/>
     </Warning>
     <Warning message="A single value was requested for tag 'targetNamespace', but in addition to returned value 'FIXME', an additional value 'http://www.opengis.net/cv/0.2.1' exists and is ignored.">
       <Detail message="Context: class InfoImpl. Element: de.interactive_instruments.ShapeChange.Model.EA.PackageInfoEA@126f7b2. Name: InterleavedCoverages"/>
     </Warning>
-    <Error message="The property 'member' in class 'GSML' has a sequence number that is already in use for another property (collectionType) which will be overwritten.">
-      <Detail message="Context: Package 'Model::Domain Model::GeoSciML v3.2::GeoSciML::Collection'"/>
-    </Error>
     <Info message="Restriction of property 'metadata' in class 'GeologicEvent' from supertype 'GeologicFeature'."/>
     <Warning message="A single value was requested for tag 'targetNamespace', but in addition to returned value 'FIXME', an additional value 'http://www.opengis.net/geomExt/0.0' exists and is ignored.">
       <Detail message="Context: class InfoImpl. Element: de.interactive_instruments.ShapeChange.Model.EA.PackageInfoEA@720b71. Name: GeometryExtensions"/>
@@ -248,6 +245,12 @@
     </Error>
     <Warning message="Default type implementation is used as range of property 'drillingMethod'.">
       <Detail message="--- Context - Property: Model::Domain Model::GeoSciML v3.2::GeoSciML::Borehole::DrillingDetails::drillingMethod"/>
+    </Warning>
+    <Error message="Could not find a type mapping and also no class within the model to map class 'CollectionTypeTerm'.">
+      <Detail message="--- Context - Property: Model::Domain Model::GeoSciML v3.2::GeoSciML::Collection::GSML::collectionType"/>
+    </Error>
+    <Warning message="Default type implementation is used as range of property 'collectionType'.">
+      <Detail message="--- Context - Property: Model::Domain Model::GeoSciML v3.2::GeoSciML::Collection::GSML::collectionType"/>
     </Warning>
     <Warning message="Default type implementation is used as range of property 'metadata'.">
       <Detail message="--- Context - Property: Model::Domain Model::GeoSciML v3.2::GeoSciML::Collection::GSML::metadata"/>
@@ -570,17 +573,14 @@
     <Error message="Could not identify a mapping for the supertype 'PreparationStep' of class 'GeologicSpecimenPreparation'.">
       <Detail message="--- Context - Class: Model::Domain Model::GeoSciML v3.2::GeoSciML::LaboratoryAnalysis-Specimen::GeologicSpecimen::GeologicSpecimenPreparation"/>
     </Error>
-    <Error message="Type 'Definition' is not covered by an RdfTypeMapEntry and also not contained in one of the schemas selected for processing. Cannot map or create the class.">
-      <Detail message="--- Context - Class: Model::Domain Model::GeoSciML v3.2::External ISO and OGC packages from HollowWorld::ISO 19136 GML::dictionary::Definition"/>
-    </Error>
-    <Error message="Could not identify a mapping for the supertype 'Definition' of class 'ControlledConcept'.">
-      <Detail message="--- Context - Class: Model::Domain Model::GeoSciML v3.2::GeoSciML::Vocabulary::ControlledConcept"/>
-    </Error>
     <Error message="Type 'Dictionary' is not covered by an RdfTypeMapEntry and also not contained in one of the schemas selected for processing. Cannot map or create the class.">
       <Detail message="--- Context - Class: Model::Domain Model::GeoSciML v3.2::External ISO and OGC packages from HollowWorld::ISO 19136 GML::dictionary::Dictionary"/>
     </Error>
     <Error message="Could not identify a mapping for the supertype 'Dictionary' of class 'GeologicVocabulary'.">
       <Detail message="--- Context - Class: Model::Domain Model::GeoSciML v3.2::GeoSciML::Vocabulary::GeologicVocabulary"/>
+    </Error>
+    <Error message="Type 'Definition' is not covered by an RdfTypeMapEntry and also not contained in one of the schemas selected for processing. Cannot map or create the class.">
+      <Detail message="--- Context - Class: Model::Domain Model::GeoSciML v3.2::External ISO and OGC packages from HollowWorld::ISO 19136 GML::dictionary::Definition"/>
     </Error>
     <Error message="Could not identify a mapping for the supertype 'Definition' of class 'VocabRelation'.">
       <Detail message="--- Context - Class: Model::Domain Model::GeoSciML v3.2::GeoSciML::Vocabulary::VocabRelation"/>

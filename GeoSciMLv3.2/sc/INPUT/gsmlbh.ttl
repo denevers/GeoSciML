@@ -14,15 +14,15 @@ gsmlbh:BoreholeDetails
         a                owl:Class ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlbh:purpose
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
                            owl:onProperty     gsmlbh:startPoint
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlbh:boreholeMaterialCustodian
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlbh:dataCustodian
+                           owl:allValuesFrom  swe:Quantity ;
+                           owl:onProperty     gsmlbh:boreholeLength
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  time:Period ;
@@ -34,19 +34,19 @@ gsmlbh:BoreholeDetails
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlbh:inclinationType
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlbh:purpose
+                           owl:onProperty     gsmlbh:boreholeMaterialCustodian
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  skos:Concept ;
                            owl:onProperty     gsmlbh:operator
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  swe:Quantity ;
-                           owl:onProperty     gsmlbh:boreholeLength
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlbh:dataCustodian
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlbh:inclinationType
                          ] ;
         skos:definition  "Borehole specific index (or metadata) information"@en .
 

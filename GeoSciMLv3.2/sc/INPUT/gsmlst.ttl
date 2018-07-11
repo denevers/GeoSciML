@@ -212,7 +212,7 @@ gsmlst:Foliation  a      owl:Class ;
         rdfs:subClassOf  gsmlst:GeologicStructure ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
-                           owl:onProperty     gsmlst:Foliation.definingElement
+                           owl:onProperty     gsmlst:Foliation.intensity
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  gsmlem:Mineral ;
@@ -227,16 +227,16 @@ gsmlst:Foliation  a      owl:Class ;
                            owl:onProperty     gsmlst:continuity
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  swe:Category ;
-                           owl:onProperty     gsmlst:Foliation.intensity
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlst:foliationType
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  gsmlu:CGI_PlanarOrientation ;
                            owl:onProperty     gsmlst:Foliation.orientation
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlst:foliationType
+                           owl:allValuesFrom  swe:Category ;
+                           owl:onProperty     gsmlst:Foliation.definingElement
                          ] ;
         skos:definition  "A planar arrangement of textural or structural features in any type of rock. Includes any of a wide variety of penetrative planar geological structures that may be present in a rock.  Examples include schistosity, mylonitic foliation, penetrative bedding structure (lamination), and cleavage.  Following the proposed definition of gneiss by the NADM Science Language Technical Team, penetrative planar foliation defined by layers > 5 mm thick is considered Layering. \r\nBedding as a fabric representing the average orientation of paleodepositional surface should be encoded through the foliationType; might apply to bedding that is layering or a foliation without layering (e.g. clast alignment in amalgamated beds)."@en .
 
@@ -465,8 +465,8 @@ gsmlst:BoundaryRelationship
 gsmlst:Fold  a           owl:Class ;
         rdfs:subClassOf  gsmlst:GeologicStructure ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  swe:Category ;
-                           owl:onProperty     gsmlst:geneticModel
+                           owl:allValuesFrom  gsmlu:CGI_LinearOrientation ;
+                           owl:onProperty     gsmlst:hingeLineOrientation
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:QuantityRange ;
@@ -474,43 +474,43 @@ gsmlst:Fold  a           owl:Class ;
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
-                           owl:onProperty     gsmlst:hingeLineCurvature
+                           owl:onProperty     gsmlst:symmetry
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
                            owl:onProperty     gsmlst:limbShape
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  swe:Category ;
-                           owl:onProperty     gsmlst:hingeShape
+                           owl:allValuesFrom  gsmlu:CGI_PlanarOrientation ;
+                           owl:onProperty     gsmlst:axialSurfaceOrientation
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  gsmlst:FoldSystem ;
                            owl:onProperty     gsmlst:Fold.system
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  swe:QuantityRange ;
-                           owl:onProperty     gsmlst:span
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  gsmlu:CGI_PlanarOrientation ;
-                           owl:onProperty     gsmlst:axialSurfaceOrientation
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  swe:Category ;
-                           owl:onProperty     gsmlst:interLimbAngle
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  gsmlu:CGI_LinearOrientation ;
-                           owl:onProperty     gsmlst:hingeLineOrientation
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  skos:Concept ;
                            owl:onProperty     gsmlst:profileType
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  swe:QuantityRange ;
+                           owl:onProperty     gsmlst:span
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  swe:Category ;
-                           owl:onProperty     gsmlst:symmetry
+                           owl:onProperty     gsmlst:geneticModel
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  swe:Category ;
+                           owl:onProperty     gsmlst:hingeLineCurvature
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  swe:Category ;
+                           owl:onProperty     gsmlst:hingeShape
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  swe:Category ;
+                           owl:onProperty     gsmlst:interLimbAngle
                          ] ;
         skos:definition  "One or more systematically curved layers, surfaces, or lines in a rock body. Fold denotes a structure formed by the deformation of a GeologicStructure to form a structure that may be described by the translation of an abstract line (the fold axis) parallel to itself along some curvilinear path (the fold profile). Folds have a hinge zone (zone of maximum curvature along the surface) and limbs (parts of the deformed surface not in the hinge zone).  Folds are described by an axial surface, hinge line , profile geometry, the solid angle between the limbs, and the relationships between adjacent folded surfaces if the folded structure is a Layering fabric (similar, parallel)."@en .
 

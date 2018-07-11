@@ -265,22 +265,6 @@ gsmlla:model  a          owl:DatatypeProperty ;
 gsmlla:GeochronologicInterpretation
         a                owl:Class ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:boolean ;
-                           owl:onProperty     gsmlla:preferredInterpretation
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  sf:SF_SamplingFeatureCollection ;
-                           owl:onProperty     gsmlla:sourceCollection
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlla:statisticalMethod
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     gsmlla:isotopicEvent
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  skos:Concept ;
                            owl:onProperty     gsmlla:isotopicSystem
                          ] ;
@@ -295,6 +279,22 @@ gsmlla:GeochronologicInterpretation
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  skos:Concept ;
                            owl:onProperty     gsmlla:interpretedBy
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  sf:SF_SamplingFeatureCollection ;
+                           owl:onProperty     gsmlla:sourceCollection
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlla:isotopicEvent
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     gsmlla:preferredInterpretation
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     gsmlla:statisticalMethod
                          ] ;
         skos:definition  "An interpretation made by a geologist of the age of a specimen made by statistical analysis of a single collection of observations.  A specimen may have multiple geochronological interpretations made on it, each related to a different observation collection."@en .
 
